@@ -92,22 +92,27 @@ class FibonacciProgression(Progression):
 
 if __name__ == "__main__":
     
-    n = 5
-    
-    progression = Progression()
+    n = 10
     
     print(f"Progression: ")
-    progression.print_progression(n)
+    Progression().print_progression(n)
     
-    arth_prog = ArithmeticProgression()
-    print(f"Arithmetic Progression: ")
-    arth_prog.print_progression(n)
-        
-    geometric_prog = GeometricProgression()
-    print("Geometric Progression: ")
+    print(f"Arithmetic Progression with increment 5: ")
+    ArithmeticProgression().print_progression(n)
     
-    geometric_prog.print_progression(n)
+    print(f"Arithmetic Progression with increment 5 and start 2: ")
+    ArithmeticProgression(5,2).print_progression(n)
+    
+    print("Geometric Progression with default start value: ")
+    GeometricProgression().print_progression(n)
+    
+    print("Geometric Progression with base value 5: ")
+    GeometricProgression(5).print_progression(n)
 
-    fib_prog = FibonacciProgression()
-    print("Fibonacci Progression: ")
-    fib_prog.print_progression(n)
+    
+    print("Fibonacci Progression with start value: ")
+    FibonacciProgression().print_progression(n)
+
+
+    print("Fibonacci Progression with start value 4,6: ")
+    FibonacciProgression(4,6).print_progression(n)
