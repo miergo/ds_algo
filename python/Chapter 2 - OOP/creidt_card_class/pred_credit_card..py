@@ -1,7 +1,9 @@
 
 from credit_card import CreditCard
 
-class PredatoryCreditCardc(CreditCard):
+class PredatoryCreditCard(CreditCard):
+    
+    OVERLIMIT_FEE = 5
     
     def __init__(self, customer, bank, acnt, limit, apr):
         
@@ -21,7 +23,7 @@ class PredatoryCreditCardc(CreditCard):
         success = super().charge(price)
         
         if not success:         # call inherited method 
-            self._balance += 5  # assess penalty
+            self._balance += PredatoryCreditCard.OVERLIMIT_FEE  # assess penalty
         return success          # caller expects return value
     
 

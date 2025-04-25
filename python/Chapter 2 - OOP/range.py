@@ -32,4 +32,11 @@ class Range:
         return self._start + k * self._step
     
     
+if __name__ == "__main__":
+    r = Range(0,4)
+    print(len(r),end="\n\n")
+    print(r[1])
     
+    
+    for i in r:
+        print(i)
